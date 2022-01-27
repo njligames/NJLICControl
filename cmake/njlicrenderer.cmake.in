@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 2.8.2)
+
+project(njlicrenderer-download NONE)
+
+include(ExternalProject)
+ExternalProject_Add(njlicrenderer
+        GIT_REPOSITORY    git@github.com:njligames/NJLICRenderer.git
+        GIT_TAG           main
+        SOURCE_DIR        "${CMAKE_BINARY_DIR}/njlicrenderer-src"
+        BINARY_DIR        "${CMAKE_BINARY_DIR}/njlicrenderer-build"
+        CONFIGURE_COMMAND ""
+        BUILD_COMMAND     ""
+        INSTALL_COMMAND   ""
+        TEST_COMMAND      ""
+        )
+
+# ExternalProject_Get_Property(njlicrenderer SOURCE_DIR)
+# set(NJLICRENDERER_INCLUDE_DIR ${CMAKE_BINARY_DIR}/njlicrenderer-src)
